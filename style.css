@@ -1,0 +1,209 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  color: #333;
+}
+
+header {
+  position: relative;
+  height: 350px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background: linear-gradient(135deg, #f39c12, #d35400);
+  overflow: hidden;
+}
+
+/* Header principal */
+header {
+  position: relative;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background: linear-gradient(135deg, #f39c12, #d35400);
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Formas diagonales grandes para profundidad */
+header::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200%;
+  height: 200%;
+  background: rgba(255,255,255,0.2);
+  transform: rotate(25deg);
+  z-index: 0;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  bottom: -60px;
+  right: -50px;
+  width: 200%;
+  height: 200%;
+  background: rgba(0,0,0,0.1);
+  transform: rotate(-25deg);
+  z-index: 0;
+}
+
+/* Contenido centrado */
+.header-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Título y subtítulo */
+header h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+header p {
+  font-size: 1.2em;
+  margin: 10px 0 15px 0;
+}
+
+/* Iconos de albañilería */
+header .iconos {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* Botón de llamada */
+.btn {
+  background: white;
+  color: #d35400;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #f39c12;
+  color: white;
+}
+
+
+/* Menú de servicios */
+.servicios-header {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.servicios-header a {
+  text-decoration: none;
+  color: white;
+  background: rgba(0,0,0,0.2);
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.servicios-header a:hover {
+  background: white;
+  color: #d35400;
+}
+
+
+
+
+
+
+/* Responsive para móviles */
+@media (max-width: 600px) {
+  header {
+    height: 280px;
+    padding: 0 10px;
+  }
+  header h1 {
+    font-size: 2em;
+  }
+  header p {
+    font-size: 1em;
+  }
+  header .iconos {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+  .btn {
+    padding: 12px 25px;
+  }
+}
+
+
+
+section {
+  background: white;
+  margin: 20px auto;
+  padding: 25px;
+  max-width: 1000px;
+  border-radius: 8px;
+}
+
+h2 {
+  margin-top: 0;
+  color: #222;
+}
+
+.servicios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.servicios div {
+  background: #eee;
+  padding: 15px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.galeria {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.galeria img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 6px;
+}
+
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9em;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2em;
+  }
+}
