@@ -148,13 +148,14 @@ header .iconos:hover {
   }
 
   header h1 {
-    font-size: 0,8em;
+    font-size: 0.5em;
   }
 
   .btn {
     padding: 6px 15px;
     font-size: 0.85em;
   }
+
 }
 
 /* Scroll suave */
@@ -193,6 +194,28 @@ html {
   opacity: 1;       /* visible al inicio */
 }
 
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  #logo-text {
+    font-size: 2.3em; /* más pequeño en móvil */
+  }
+
+  #painter {
+    bottom: 65px;    /* pintor más cerca de las letras */
+    width: 45px;     /* tamaño del GIF más pequeño */
+  }
+}
+
+@media (max-width: 480px) {
+  #logo-text {
+    font-size: 1.8em; /* aún más pequeño en móviles muy pequeños */
+  }
+
+  #painter {
+    bottom: 10;       /* pintor pegado a la base */
+    width: 40px;     /* ajustar tamaño */
+  }
+}
 
 
 
@@ -291,4 +314,3 @@ footer {
     font-size: 2em;
   }
 }
-
